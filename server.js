@@ -15,7 +15,7 @@ http.createServer(function(req, res) {
       res.write(data);
       res.end();
     });
-}).listen(process.env.PORT || 3000, process.env.IP);
+}).listen(process.env.OPENSHIFT_NODEJS_PORT|| 3000, process.env.OPENSHIFT_NODEJS_IP);
 
 // Note: when spawning a server on Cloud9 IDE, 
 // listen on the process.env.PORT and process.env.IP environment variables
